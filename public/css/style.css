@@ -1,0 +1,252 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
+
+:root {
+  --dark-color-a: #667aff;
+  --dark-color-b: #7386ff;
+  --light-color: #e6e9ff;
+  --success-color: #5cb85c;
+  --error-color: #d9534f;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  background: white;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.btn {
+  cursor: pointer;
+  padding: 5px 15px;
+  background: #43a047;
+  color: white;
+  border: 0;
+  font-size: 17px;
+}
+
+/* food Page */
+
+.food-container {
+  background: #fff;
+  overflow: hidden;
+}
+
+.food-header {
+  background: #ef5350;
+  color: #fff;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#exit {
+  color: white;
+  background-color: black;
+  padding: 5px 10px;
+}
+
+.dishes {
+  border: 2px solid purple;
+}
+
+.dish {
+  display: inline-block;
+  width: 300px;
+  height: 300px;
+
+  border: 2px solid #90a4ae;
+  box-shadow: 1px 1px 10px gray;
+  border-radius: 4px;
+  margin: 20px;
+}
+
+.dish p {
+  font-size: 30px;
+  font-family: Roboto;
+  text-align: center;
+  display: block;
+  height: 84.9%;
+}
+
+#btnCancelar {
+  width: 50%;
+  padding: 5% 50px 5% 0;
+  text-align: center;
+  border-style: none;
+  border-radius: 4px;
+  background-color: #ff616f;
+}
+
+#btnCancelar:hover {
+  background-color: #ef5350;
+  cursor: pointer;
+}
+
+#btnTerminada:hover {
+  cursor: pointer;
+  background-color: #388e3c;
+}
+
+#btnTerminada {
+  width: 50%;
+  padding: 5% 50px 5% 0;
+  float: right;
+  text-align: center;
+  border-style: none;
+  border-radius: 4px;
+  background-color: #4caf50;
+}
+
+.food-sidebar {
+  background: #ef5350;
+  color: #fff;
+  padding: 20px 20px 60px;
+  overflow-y: scroll;
+}
+
+.food-sidebar h2 {
+  font-size: 20px;
+  background: #ef5350;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+.food-sidebar h3 {
+  margin-bottom: 15px;
+}
+
+.food-sidebar ul li {
+  padding: 10px 0;
+}
+
+.food-messages {
+  padding: 30px;
+  max-height: 500px;
+  overflow-y: scroll;
+}
+
+.food-messages .message {
+  padding: 10px;
+  margin-bottom: 15px;
+  background-color: var(--light-color);
+  border-radius: 5px;
+}
+
+.food-messages .message .meta {
+  font-size: 15px;
+  font-weight: bold;
+  color: var(--dark-color-b);
+  opacity: 0.7;
+  margin-bottom: 7px;
+}
+
+.food-messages .message .meta span {
+  color: #777;
+}
+
+.food-form-container {
+  padding: 20px 30px;
+  background-color: var(--dark-color-a);
+}
+
+.food-form-container form {
+  display: flex;
+}
+
+.food-form-container input[type="text"] {
+  font-size: 16px;
+  padding: 5px;
+  height: 40px;
+  flex: 1;
+}
+
+/* Join Page */
+.join-container {
+  max-width: 500px;
+  margin: 80px auto;
+  color: #f44336;
+  border: 2px solid #ffa000;
+  border-radius: 5px;
+}
+
+.join-header {
+  text-align: center;
+  padding: 20px;
+  background: white;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.join-main {
+  padding: 30px 40px;
+  background: rgba(255, 255, 255, 0.98);
+}
+
+.join-main p {
+  margin-bottom: 20px;
+}
+
+.join-main .form-control {
+  margin-bottom: 20px;
+}
+
+.join-main label {
+  display: block;
+  margin-bottom: 5px;
+  color: rgb(47, 47, 47);
+}
+
+.join-main input[type="text"] {
+  font-size: 16px;
+  padding: 5px;
+  height: 40px;
+  width: 100%;
+  border-style: none;
+  border-radius: 2px;
+  border: 2px solid gray;
+}
+
+.join-main input[type="text"]:hover {
+  border: 2px solid #ef9a9a;
+}
+
+.join-main input[type="text"]:focus {
+  outline: none;
+  border: 2px solid #e57373;
+}
+
+.join-main select {
+  font-size: 16px;
+  padding: 5px;
+  height: 40px;
+  width: 100%;
+}
+
+.join-main .btn {
+  margin-top: 20px;
+  width: 100%;
+}
+
+@media (max-width: 700px) {
+  .food-main {
+    display: block;
+  }
+
+  .food-sidebar {
+    display: none;
+  }
+}

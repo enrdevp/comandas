@@ -1,0 +1,17 @@
+{
+  "name": "comandas",
+  "version": "1.0.0",
+  "description": "Real time comandas with socket.io NodeJS",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server",
+    "dev": "nodemon server"
+  },
+  "author": "Xd",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1",
+    "moment": "^2.25.3",
+    "socket.io": "^2.3.0"
+  }
+}
