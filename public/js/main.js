@@ -14,26 +14,6 @@ socket.on("newID", (id) => {
   socket.emit("newComanda", { idSocket, dish });
 });
 
-function deleteComanda(noComanda) {
-  console.log(noComanda);
-  socket.emit("deleteComanda", noComanda);
-}
+function deleteComanda(noComanda) {}
 
-socket.on("addComanda", (comandas) => {
-  let dishes = document.querySelector("#dishes");
-  dishes.innerHTML = "";
-
-  //Add each comanda
-  comandas.forEach((comanda) => {
-    const div = document.createElement("div");
-    div.classList.add("dish");
-    div.innerHTML = `
-    <p id="${comanda.id}">${comanda.dish}</p>
-    <button id="btnCancelar" onClick="deleteComanda(${contador})">Cancelar</button>
-    <button id="btnTerminada" onClick="deleteComanda(${contador})">Terminada</button>
-  `;
-
-    dishes.appendChild(div);
-    contador++;
-  });
-});
+socket.on("addComanda", (comandas) => {});
