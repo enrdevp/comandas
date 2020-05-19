@@ -2,6 +2,7 @@ const path = require("path");
 const http = require("http");
 const express = require("express");
 const socketio = require("socket.io");
+require("dotenv").config({ path: "config.env" });
 const { addComanda, getComandas, deleteComanda } = require("./utils/comandas");
 const app = express();
 //Passing the express app to the http server
@@ -48,8 +49,9 @@ io.on("connection", (socket) => {
   });
 });
 
+const HOST = process.env.HOST || "0.0.0.0";
 const PORT = process.env.PORT || 3000;
 
-server.listen(PORT, () => {
-  console.log(`Server running on port ${PORT}`);
+server.listen(PORT, HOST, () => {
+  console.log(`Server running on ${HOST}:${PORT}`);
 });
